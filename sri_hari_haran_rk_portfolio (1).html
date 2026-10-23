@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#081225">
+  <meta name="description" content="Sri Hari Haran RK - B.Sc. Computer Science Student Portfolio">
+  <title>Sri Hari Haran RK | Portfolio</title>
+  <style>
+    :root {
+      --bg: #081225;
+      --panel: #111e35;
+      --blue: #60a5fa;
+      --text: #f1f5f9;
+      --muted: #b0bfd4;
+      --border: #263a58;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1080px, 90%); margin: auto; }
+    header {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(8, 18, 37, .97);
+      border-bottom: 1px solid var(--border);
+    }
+    nav {
+      min-height: 72px; display: flex; align-items: center;
+      justify-content: space-between; gap: 18px; padding: 12px 0;
+    }
+    .logo { color: var(--blue); font-size: 1.1rem; font-weight: 800; }
+    .nav-links {
+      display: flex; flex-wrap: wrap; gap: 16px;
+      list-style: none; font-size: .9rem;
+    }
+    .nav-links a:hover, .nav-links a:focus { color: var(--blue); }
+    .hero {
+      min-height: 78vh; display: flex; align-items: center; padding: 85px 0;
+      background: radial-gradient(ellipse at 80% 20%, #183661 0%, transparent 55%);
+    }
+    .eyebrow { color: var(--blue); font-weight: 700; letter-spacing: 3px; font-size: .85rem; }
+    h1 {
+      font-size: clamp(2.5rem, 7vw, 4.8rem); line-height: 1.12;
+      margin: 18px 0; overflow-wrap: anywhere;
+    }
+    h1 span { color: var(--blue); }
+    .hero h2 { color: #cbd5e1; font-size: clamp(1.15rem, 3vw, 1.8rem); font-weight: 500; }
+    .intro { color: var(--muted); max-width: 650px; margin-top: 16px; font-size: 1.05rem; }
+    .buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+    .btn {
+      display: inline-block; padding: 11px 18px; border-radius: 9px;
+      border: 1px solid var(--blue); color: var(--blue); font-weight: 700;
+      transition: transform .2s, background .2s;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .primary { background: var(--blue); color: #081225; }
+    section { padding: 68px 0; }
+    .section-title { font-size: clamp(1.8rem, 4vw, 2.4rem); margin-bottom: 12px; }
+    .section-description { color: var(--muted); max-width: 700px; margin-bottom: 28px; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .card {
+      background: var(--panel); border: 1px solid var(--border);
+      padding: 24px; border-radius: 14px; height: 100%; overflow-wrap: anywhere;
+    }
+    .card h3 { margin-bottom: 10px; }
+    .card p { color: var(--muted); }
+    .skill-icon { color: var(--blue); font-size: 1.8rem; font-weight: 800; margin-bottom: 8px; }
+    .tag {
+      display: inline-block; margin-top: 14px; padding: 4px 11px;
+      border-radius: 20px; background: #172742; color: #93c5fd; font-size: .82rem;
+    }
+    .about-layout { display: grid; grid-template-columns: 1.2fr .8fr; gap: 20px; }
+    .info-row {
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+      padding: 11px 0; border-bottom: 1px solid var(--border);
+    }
+    .info-row span { color: var(--muted); }
+    .contact-link { color: #93c5fd; overflow-wrap: anywhere; }
+    .contact-item { margin: 12px 0; }
+    footer { text-align: center; padding: 24px; color: var(--muted); border-top: 1px solid var(--border); }
+    :focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
+    @media (max-width: 720px) {
+      nav { align-items: flex-start; flex-direction: column; }
+      .nav-links { gap: 10px 15px; }
+      .grid, .about-layout { grid-template-columns: 1fr; }
+      .hero { min-height: 65vh; padding: 62px 0; }
+      section { padding: 50px 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container" aria-label="Main navigation">
+      <a class="logo" href="#home">SHH RK.</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <p class="eyebrow">WELCOME TO MY PORTFOLIO</p>
+        <h1>SRI HARI HARAN <span>RK</span></h1>
+        <h2>2nd Year B.Sc. Computer Science Student</h2>
+        <p class="intro">
+          I'm a Computer Science student interested in programming,
+          technology and problem-solving. I'm building my technical
+          skills in C, Python and Java while exploring software development.
+        </p>
+        <div class="buttons">
+          <a class="btn primary" href="#skills">Explore My Skills</a>
+          <a class="btn" href="#contact">Contact Me</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-description">A short introduction about me and my learning journey.</p>
+        <div class="about-layout">
+          <article class="card">
+            <h3>Hello! 👋</h3>
+            <p>
+              I'm Sri Hari Haran RK, a second-year B.Sc. Computer Science
+              student. I'm learning programming with C, Python and Java,
+              and improving my logical thinking and problem-solving skills.
+              My goal is to keep learning, build practical projects and
+              grow my knowledge of computer science.
+            </p>
+          </article>
+          <div class="card">
+            <h3>Quick Information</h3>
+            <div class="info-row"><span>Name</span><strong>Sri Hari Haran RK</strong></div>
+            <div class="info-row"><span>Course</span><strong>B.Sc. Computer Science</strong></div>
+            <div class="info-row"><span>Year</span><strong>2nd Year</strong></div>
+            <div class="info-row"><span>Interests</span><strong>Programming & Technology</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <h2 class="section-title">My Technical Skills</h2>
+        <p class="section-description">Programming languages I'm currently learning and practising.</p>
+        <div class="grid">
+          <article class="card">
+            <div class="skill-icon">C</div>
+            <h3>C Programming</h3>
+            <p>Practising programming fundamentals, conditions, loops, functions and problem-solving.</p>
+            <span class="tag">Programming</span>
+          </article>
+          <article class="card">
+            <div class="skill-icon">Py</div>
+            <h3>Python</h3>
+            <p>Learning Python syntax, data types, functions and core programming concepts.</p>
+            <span class="tag">Programming</span>
+          </article>
+          <article class="card">
+            <div class="skill-icon">Java</div>
+            <h3>Java</h3>
+            <p>Exploring Java syntax, object-oriented programming and core language concepts.</p>
+            <span class="tag">Programming</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title">My Projects</h2>
+        <p class="section-description">I'll showcase completed projects here as I gain practical experience.</p>
+        <article class="card">
+          <h3>Projects Coming Soon</h3>
+          <p>
+            I'm currently strengthening my programming skills. This section
+            will be updated with project descriptions, technologies used and
+            source-code links when my projects are ready.
+          </p>
+          <span class="tag">Learning & Building</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container">
+        <h2 class="section-title">Education</h2>
+        <article class="card">
+          <h3>B.Sc. Computer Science</h3>
+          <p>Second-year undergraduate student</p>
+          <p>Currently learning programming and computer science fundamentals.</p>
+          <span class="tag">Undergraduate</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <p class="section-description">Feel free to contact me for learning opportunities and professional connections.</p>
+        <div class="card">
+          <div class="contact-item">
+            <strong>Phone:</strong>
+            <a class="contact-link" href="tel:+918778277033">8778277033</a>
+          </div>
+          <div class="contact-item">
+            <strong>Email:</strong>
+            <a class="contact-link" href="mailto:srihariharan718@gmail.com">srihariharan718@gmail.com</a>
+          </div>
+          <p style="margin-top: 16px;">
+            GitHub and LinkedIn profile links can be added here whenever you're ready.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="year"></span> Sri Hari Haran RK · Personal Portfolio</div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
